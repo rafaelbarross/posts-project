@@ -9,31 +9,35 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: #eee;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `;
 
 export const Container = styled.section`
   min-height: 100vh;
-  max-width: 1420px;
-  margin: 0 auto;
   padding: 30px;
 `;
 
 export const SearchContainer = styled.header`
-  margin-bottom: 2em;
-`
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+`;
 
 export const Input = styled.input`
   padding: 0.5em;
   color: ${props => props.inputColor || "palevioletred"};
   background: papayawhip;
-  border: 2px solid ;
+  border: 2px solid palevioletred;
   border-radius: 3px;
   width: 100%;
   height: 3em;
   font-size: 1em; 
   font-family: 'Impact';
-  placeholder
 `;
 
 export const Posts = styled.div`
@@ -42,13 +46,18 @@ export const Posts = styled.div`
   gap: 30px;
 `;
 
+export const ButtonContainer = styled.div`
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+`;
+
 export const Button = styled.button`
-  display: inline-block;
   font-family: 'Impact';
   color: black;
   font-size: 1em;
   margin: 2em 0 0;
-  padding: 0.25em 1em;
+  padding: 15px 30px;
   border: 2px solid palevioletred;
   border-radius: 3px;
   width: 100%;
@@ -71,7 +80,6 @@ export const Post = styled.div`
   &:hover {
     transform: scale(1.05);
   }
-
 `;
 
 export const PostContent = styled.div`

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GlobalStyle, Container, NoPosts, SearchContainer } from "./styles/style";
+import { GlobalStyle, Container, NoPosts, SearchContainer, ButtonContainer } from "./styles/style";
 import { loadPosts } from "./utils/load-posts";
 import { PostsText } from "./components/Posts/component";
 import { ButtonLoad } from "./components/Button/component";
@@ -75,13 +75,15 @@ export class App extends Component {
           <NoPosts>There are no posts! 😢</NoPosts>
         )}
         
-        {!searchValue && (
-          <ButtonLoad
-            text="Load more posts"
-            onClick={this.loadMorePosts}
-            disabled={noMorePosts}
-          />
-        )}
+        <ButtonContainer>
+          {!searchValue && (
+            <ButtonLoad
+              text="Load more posts"
+              onClick={this.loadMorePosts}
+              disabled={noMorePosts}
+            />
+          )}
+        </ButtonContainer>
       </Container>
     );
   }
