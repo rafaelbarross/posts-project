@@ -15,6 +15,11 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+
 `;
 
 export const Container = styled.section`
@@ -83,7 +88,7 @@ export const Post = styled.div`
 `;
 
 export const PostContent = styled.div`
-  padding: 20px;
+  padding: 30px;
 `
 export const ImagePost = styled.img`
   max-width: 100%;
