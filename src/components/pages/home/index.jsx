@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { GlobalStyle, Container, NoPosts, SearchContainer, ButtonContainer } from "./styles/style";
-import { loadPosts } from "./utils/load-posts";
-import { PostsText } from "./components/Posts/component";
-import { ButtonLoad } from "./components/Button/component";
-import { InputText } from "./components/Textinput/component";
+import { GlobalStyle, Container, NoPosts, SearchContainer, ButtonContainer } from "../../../global/globalStyle";
+import { loadPosts } from "../../../utils/load-posts";
+import { PostsText } from "../../templates/Post/home";
+import { ButtonLoad } from "../../atoms/ButtonPosts/component";
+import { InputText } from "../../Input/component";
 
 export class App extends Component {
   state = {
-    posts: [],
+    posts: [], 
     allPosts: [],
     page: 0,
     postsPerPage: 6,
