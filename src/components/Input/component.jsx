@@ -1,4 +1,4 @@
-import { Input } from "../../global/globalStyle";
+import { Input } from "./style";
 
 export const InputText = ({ searchValue, HandleChange }) => {
     return (

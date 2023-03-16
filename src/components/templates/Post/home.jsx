@@ -1,5 +1,5 @@
 import { PostCard } from "../../organisms/PostCard/component";
-import { Posts } from "../../../global/globalStyle";
+import { Posts } from "./style";
 
 export const PostsText= ({ posts }) => {
     return (

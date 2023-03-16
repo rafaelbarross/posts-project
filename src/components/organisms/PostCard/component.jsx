@@ -1,4 +1,4 @@
-import { Post, PostContent, ImagePost, Title, Paragraph } from "../../../global/globalStyle.js";
+import { Post, PostContent, ImagePost, Title, Paragraph } from "./style";
 
 export const PostCard = ({ post }) => {
     return (

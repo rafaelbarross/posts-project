@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Button } from "../../../global/globalStyle";
+import { Button } from "./style";
 
 export class ButtonLoad extends Component {
     render() {

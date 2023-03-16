@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { GlobalStyle, Container, NoPosts, SearchContainer, ButtonContainer } from "../../../global/globalStyle";
+import { GlobalStyle} from "../../../global/globalStyle";
+import { Container, SearchContainer, ButtonContainer, NoPosts} from "./style";
 import { loadPosts } from "../../../utils/load-posts";
 import { PostsText } from "../../templates/Post/home";
 import { ButtonLoad } from "../../atoms/ButtonPosts/component";
