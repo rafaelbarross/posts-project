@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { GlobalStyle} from "../../../global/globalStyle";
-import { Container, SearchContainer, ButtonContainer, NoPosts} from "./style";
+import { Header, ButtonRegister, Container, SearchContainer, ButtonContainer, NoPosts, SectionNav, SectionLogin, SectionRegister} from "./style";
 import { loadPosts } from "../../../utils/load-posts";
 import { PostsText } from "../../templates/Post/home";
 import { ButtonLoad } from "../../atoms/ButtonPosts/component";
 import { InputText } from "../../Input/component";
+import {BiSearch} from "react-icons/bi"
 
 export class App extends Component {
   state = {
@@ -61,31 +63,42 @@ export class App extends Component {
      : posts;
 
     return (
-      <Container>
-        <GlobalStyle />
-        
+      <>
+      <Header>
         <SearchContainer>
-          <InputText searchValue={searchValue} HandleChange={this.HandleChange}/>
+          <BiSearch/>
+          <InputText searchValue={searchValue} HandleChange={this.HandleChange}/> 
         </SearchContainer>
-        
-        {filteredPosts.length > 0 &&(
-          <PostsText posts={filteredPosts} />
-        )}
+        <SectionNav> 
+          <SectionLogin>
+            <Link to="/login"><h1>Login</h1></Link>
+          </SectionLogin>
+          <SectionRegister>
+            <Link to="/register"><ButtonRegister>Register</ButtonRegister></Link>
+          </SectionRegister>
+        </SectionNav> 
+      </Header>
 
-        {filteredPosts.length === 0 && (
-          <NoPosts>There are no posts! 😢</NoPosts>
-        )}
-        
-        <ButtonContainer>
-          {!searchValue && (
-            <ButtonLoad
-              text="Load more posts"
-              onClick={this.loadMorePosts}
-              disabled={noMorePosts}
-            />
+      <Container>
+          <GlobalStyle />
+          
+          {filteredPosts.length > 0 && (
+            <PostsText posts={filteredPosts} />
           )}
-        </ButtonContainer>
-      </Container>
+
+          {filteredPosts.length === 0 && (
+            <NoPosts>There are no posts! 😢</NoPosts>
+          )}
+
+          <ButtonContainer>
+            {!searchValue && (
+              <ButtonLoad
+                text="Load more posts"
+                onClick={this.loadMorePosts}
+                disabled={noMorePosts} />
+            )}
+          </ButtonContainer>
+        </Container></>
     );
   }
 }
