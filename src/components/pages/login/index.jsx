@@ -1,19 +1,6 @@
 import React, { Component } from "react";
 import { GlobalStyle } from "../../../global/globalStyle";
-import {
-    Main,
-    Form,
-    Header,
-    Inputs,
-    Input,
-    PasswordToggle,
-    CheckboxContainer,
-    Checkbox,
-    CheckboxText,
-    SignInButton,
-    ForgetPasswordLink,
-    SignUpLink
-} from "./style";
+import { Main, Form, Header, Inputs, Input, CheckboxContainer, Checkbox, CheckboxText, SignInButton, ForgetPasswordLink, SignUpLink } from "./style";
 import { MdOutlineVisibilityOff, MdOutlineVisibility } from "react-icons/md";
 
 export class Login extends Component {
@@ -63,7 +50,7 @@ export class Login extends Component {
                             Forget password ?
                         </ForgetPasswordLink>
                         <SignUpLink className="signup-link">
-                            Don't have an account? <a href="#">Sign up</a>
+                            Don't have an account? <a href="https://github.com/rafaelbarross">Sign up</a>
                         </SignUpLink>
                     </Inputs>
                 </Form>
